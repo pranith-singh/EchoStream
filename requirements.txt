@@ -1,0 +1,7 @@
+flask
+werkzeug
+azure-storage-blob
+openai-whisper
+torch
+
+

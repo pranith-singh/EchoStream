@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subtitles</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        padding: 20px; 
+        background-color: #1e1e1e;  /* Dark background for contrast */
+        color: #ffffff;  /* Default text color */
+    }
+    select { 
+        padding: 5px; 
+        margin-bottom: 20px; 
+        background: #333;
+        color: #fff;
+        border: 1px solid #555;
+        border-radius: 5px;
+    }
+    #subtitle { 
+        border: 1px solid #555; 
+        padding: 15px; 
+        border-radius: 5px; 
+        background: #333; 
+        color: #fff;  /* Make subtitles white */
+        max-height: 400px; 
+        overflow-y: auto; 
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    h2 { color: #fff; }
+</style>
+</head>
+<body>
+
+<h2>Subtitles</h2>
+
+<label for="language">Choose Language:</label>
+<select id="language">
+    {% for lang in languages %}
+    <option value="{{ lang }}">{{ lang }}</option>
+    {% endfor %}
+</select>
+
+<div id="subtitle">{{ subtitles['English'] }}</div>
+
+<script>
+    const subtitles = {{ subtitles|tojson }};
+    const languageSelect = document.getElementById('language');
+    const subtitleDiv = document.getElementById('subtitle');
+
+    languageSelect.addEventListener('change', function() {
+        const selectedLang = this.value;
+        subtitleDiv.textContent = subtitles[selectedLang];
+    });
+</script>
+
+</body>
+</html>
