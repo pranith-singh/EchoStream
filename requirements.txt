@@ -2,6 +2,9 @@ flask
 werkzeug
 azure-storage-blob
 openai-whisper
-torch
+deep-translator
+waitress
+torch --index-url https://download.pytorch.org/whl/cpu
+
 
 
