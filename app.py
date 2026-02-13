@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = "supersecretkey"
 
 # Azure Blob storage config
-STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=prs;AccountKey=dyLZnt/CXmXMFV3YsPCaVrpHMgtmbDOH0hcursSRqJeVd1f1wS9d4bOLsfkj38mmOHJC2EOVrALp+AStexiNTw==;EndpointSuffix=core.windows.net"
+STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=**;AccountKey=********"
 STORAGE_ACCOUNT_NAME = "prs"
 CONTAINER_NAME = "files"
 blob_service_client = BlobServiceClient.from_connection_string(STORAGE_CONNECTION_STRING)
