@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="echostream-logo.png" alt="EchoStream Logo" width="140" />
+  <img src="static/logo.png" alt="EchoStream Logo" width="140" />
 </p>
 
 # 🔊 EchoStream
